@@ -30,7 +30,7 @@ app.post("/shorten", async (req, res) => {
   const newUrl = new Url({ shortId, originalUrl });
   await newUrl.save();
 
-  res.json({ shortUrl: `http://localhost:5000/${shortId}` });
+  res.json({ shortUrl: `${process.env.BASE_URL}/${shortId}` });
 });
 
 // Redirect

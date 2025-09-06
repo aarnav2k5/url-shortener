@@ -188,7 +188,7 @@
       const data = await response.json();
 
       resultBox.innerHTML = `
-        ✅ Shortened:
+        Here is Your Shortened URL:
         <div class="short-url-box">
           <a href="${data.shortUrl}" target="_blank" id="shortLink">${data.shortUrl}</a>
           <button class="copy-btn" onclick="copyUrl('${data.shortUrl}')">Copy</button>
